@@ -346,11 +346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464750, guid: 2333d36c18b341b4ba2b1d70da0b7615, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99644727
+      value: 0.99428266
       objectReference: {fileID: 0}
     - target: {fileID: 464750, guid: 2333d36c18b341b4ba2b1d70da0b7615, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08421909
+      value: -0.10678045
       objectReference: {fileID: 0}
     - target: {fileID: 464750, guid: 2333d36c18b341b4ba2b1d70da0b7615, type: 3}
       propertyPath: m_LocalRotation.y
@@ -362,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 464750, guid: 2333d36c18b341b4ba2b1d70da0b7615, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -9.662
+      value: -12.26
       objectReference: {fileID: 0}
     - target: {fileID: 464750, guid: 2333d36c18b341b4ba2b1d70da0b7615, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -655,7 +655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: maxPower
-      value: 1.2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: shotPower
@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850134592, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: m_AngularDrag
-      value: 6.03
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1576791406964563970, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: m_RootOrder
