@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;   
 
@@ -17,6 +18,10 @@ public class Vise_Tir : MonoBehaviour
     public bool isAiming;
    
     private Rigidbody rigidbodyA;
+
+    public Image barre;
+
+    public float actualPower;
 
     [DllImport("user32.dll")]
     public static extern bool SetCursorPos(int X, int Y);
@@ -68,6 +73,7 @@ public class Vise_Tir : MonoBehaviour
         {
             strength = maxPower;
         }
+        actualPower = strength * 1.25f;
 
         rigidbodyA.AddForce(direction * strength * shotPower);
         isIdle = false;
@@ -105,6 +111,8 @@ public class Vise_Tir : MonoBehaviour
     }
     void Update()
     {
+        barre.fillAmount = actualPower;
+
         if (Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(0);
@@ -132,7 +140,11 @@ public class Vise_Tir : MonoBehaviour
         if (rigidbodyA.velocity.magnitude < stopVelocity)
         {
             Stop();
-        } 
+        }
+        else
+        {
+            isIdle = false;
+        }
         
         ProccesAim();
     }
