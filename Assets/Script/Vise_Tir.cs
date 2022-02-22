@@ -65,6 +65,7 @@ public class Vise_Tir : MonoBehaviour
         {
             Shoot(worldPoint.Value);
             cameraController.canRotate = true;
+            barre.fillAmount = 0;
         }
 
 
@@ -123,7 +124,10 @@ public class Vise_Tir : MonoBehaviour
     void Update()
     {
         //Debug.Log(diffDistance);
-        barre.fillAmount = diffDistance/4;
+        if (isAiming)
+        {
+            barre.fillAmount = diffDistance / 4;
+        }
 
         if (Input.GetKeyDown("r"))
         {
