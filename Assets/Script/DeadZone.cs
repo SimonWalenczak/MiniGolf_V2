@@ -8,6 +8,6 @@ public class DeadZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Homer Simpson : C'est nul !");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

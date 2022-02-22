@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraController : MonoBehaviour
 {
     #region Init.variables
-    public Transform target; 
+    public Transform target;
     public Camera sceneCamera;
 
     public float mouseRotateSpeed = 5f;
@@ -39,6 +40,7 @@ public class CameraController : MonoBehaviour
     private float minCameraFieldOfView = 6;
     private float maxCameraFieldOfView = 30;
     Vector3 dir;
+
     #endregion
     private void Awake()
     {

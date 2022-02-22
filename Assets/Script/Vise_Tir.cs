@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;   
 
@@ -23,6 +24,13 @@ public class Vise_Tir : MonoBehaviour
 
     public float actualPower;
     public float diffDistance;
+
+    public int count = 0;
+    public TextMeshProUGUI nb_coups;
+
+    public Image pointVert;
+
+    static float PAS_TOUCHE = 3.65f;
 
     [DllImport("user32.dll")]
     public static extern bool SetCursorPos(int X, int Y);
@@ -65,10 +73,10 @@ public class Vise_Tir : MonoBehaviour
         {
             Shoot(worldPoint.Value);
             cameraController.canRotate = true;
+            count++;
+            nb_coups.SetText(count.ToString());
             barre.fillAmount = 0;
         }
-
-
     }
 
     private void Shoot(Vector3 worldPoint)
@@ -120,13 +128,14 @@ public class Vise_Tir : MonoBehaviour
         rigidbodyA.velocity = Vector3.zero;
         rigidbodyA.angularVelocity = Vector3.zero;
         isIdle = true;
+        pointVert.color = Color.green;
     }
     void Update()
     {
         //Debug.Log(diffDistance);
         if (isAiming)
         {
-            barre.fillAmount = diffDistance / 4;
+            barre.fillAmount = diffDistance / PAS_TOUCHE;
         }
 
         if (Input.GetKeyDown("r"))
@@ -137,6 +146,7 @@ public class Vise_Tir : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             UnityEditor.EditorApplication.isPlaying = false;
+            //Application.Quit();
         }
 
         if (!isAiming)
@@ -160,6 +170,7 @@ public class Vise_Tir : MonoBehaviour
         else
         {
             isIdle = false;
+            pointVert.color = Color.red;
         }
         
         ProccesAim();
