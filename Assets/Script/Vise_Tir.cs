@@ -22,6 +22,7 @@ public class Vise_Tir : MonoBehaviour
     public Image barre;
 
     public float actualPower;
+    public float diffDistance;
 
     [DllImport("user32.dll")]
     public static extern bool SetCursorPos(int X, int Y);
@@ -44,6 +45,12 @@ public class Vise_Tir : MonoBehaviour
         }
 
         Vector3? worldPoint = CastMouseClickRay();
+        Vector3 temp = Vector3.zero;
+
+        if(worldPoint != null)
+        {
+            temp = (Vector3)worldPoint;
+        }
 
         if (!worldPoint.HasValue)
         {
@@ -52,11 +59,15 @@ public class Vise_Tir : MonoBehaviour
 
         DrawLine(worldPoint.Value);
 
+        diffDistance = Vector3.Distance(temp, transform.position);
+
         if (Input.GetMouseButtonUp(0))
         {
             Shoot(worldPoint.Value);
             cameraController.canRotate = true;
         }
+
+
     }
 
     private void Shoot(Vector3 worldPoint)
@@ -111,7 +122,8 @@ public class Vise_Tir : MonoBehaviour
     }
     void Update()
     {
-        barre.fillAmount = actualPower;
+        //Debug.Log(diffDistance);
+        barre.fillAmount = diffDistance/4;
 
         if (Input.GetKeyDown("r"))
         {
