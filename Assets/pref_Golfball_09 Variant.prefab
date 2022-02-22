@@ -137,9 +137,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576791406964785788}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.75
-  m_AngularDrag: 0.05
+  m_Mass: 0.5
+  m_Drag: 0.8
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -157,9 +157,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352de8d380bb4134785ee9f8da1d4841, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPower: -150
+  shotPower: 250
   lineRenderer: {fileID: 390121256}
-  stopVelocity: 0.05
+  stopVelocity: 0.03
+  cameraController: {fileID: 0}
+  maxPower: 3
+  isIdle: 0
+  isAiming: 0
+  barre: {fileID: 0}
+  actualPower: 0
 --- !u!1001 &1576791406964668962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,11 +175,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145502, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
       propertyPath: m_Name
-      value: pref_Golfball_09
+      value: pref_Golfball_09 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 432672, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432672, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 432672, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 432672, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 432672, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,10 +233,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3362628, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 61c00ea2d2f75664c98fc8831ffd2d56, type: 3}
     - target: {fileID: 13594292, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: 7ea51446a01e96d4789108b5e12bb8dd, type: 2}
+      objectReference: {fileID: 13400000, guid: 7a08c057b401a694d983e4d1eaebd9a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 379e400ca0f590543a8de2895ba35b7b, type: 3}
 --- !u!1 &1576791406964785788 stripped
