@@ -37,7 +37,7 @@ public class Vise_Tir : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.visible = false;
+        
 
         rigidbodyA = GetComponent<Rigidbody>();
 
@@ -47,6 +47,8 @@ public class Vise_Tir : MonoBehaviour
 
     private void ProccesAim()
     {
+        Cursor.visible = false;
+
         if (!isAiming || !isIdle)
         {
             return;
@@ -132,6 +134,7 @@ public class Vise_Tir : MonoBehaviour
     }
     void Update()
     {
+
         //Debug.Log(diffDistance);
         if (isAiming)
         {
