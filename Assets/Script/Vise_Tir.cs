@@ -216,7 +216,7 @@ public class Vise_Tir : MonoBehaviour
         if (Input.GetKeyDown("escape"))
         {
             UnityEditor.EditorApplication.isPlaying = false;
-            //Application.Quit();
+          //  Application.Quit();
         }
 
         if (!isAiming)

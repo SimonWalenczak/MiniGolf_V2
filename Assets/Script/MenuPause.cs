@@ -15,7 +15,6 @@ public class MenuPause : MonoBehaviour
         UI.SetActive(!UI.activeSelf);
         PauseMenu.SetActive(!PauseMenu.activeSelf);
         ball.SetActive(!ball.activeSelf);
-        
     }
 
     public void Quit()
