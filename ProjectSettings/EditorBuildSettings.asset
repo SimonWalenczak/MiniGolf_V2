@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: a24fd3c3cd7266a479906f79e3d2737b
   - enabled: 1
+    path: Assets/Scenes/Gabin_testValue.unity
+    guid: c83f4df515950da4e8e23a5f290604b8
+  - enabled: 1
     path: Assets/Scenes/Simon.unity
     guid: ebaaa2a3acce05342906c819168c8c21
   m_configObjects: {}

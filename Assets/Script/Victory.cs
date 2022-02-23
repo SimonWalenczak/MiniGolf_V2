@@ -21,6 +21,6 @@ public class Victory : MonoBehaviour
     IEnumerator NextLevel()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
