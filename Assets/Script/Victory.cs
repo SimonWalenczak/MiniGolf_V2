@@ -14,13 +14,12 @@ public class Victory : MonoBehaviour
         Debug.Log("Bravo !!!");
         text.SetActive(true);
         fade.fadeOut = true;
-        pointVert.SetActive(false);
         StartCoroutine(NextLevel());
     }
 
     IEnumerator NextLevel()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

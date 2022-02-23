@@ -20,15 +20,19 @@ public class Vise_Tir : MonoBehaviour
    
     private Rigidbody rigidbodyA;
 
-    public Image barre;
 
     public float actualPower;
     public float diffDistance;
 
+    public GameObject sphereIndic;
     public int count = 0;
     public TextMeshProUGUI nb_coups;
 
-    public Image pointVert;
+    public Material sphere;
+    private bool can_change = false;
+    public float lerpDuration = 0.7f;
+    public float WaitForSeconds1 = 2;
+    public float WaitForSeconds2 = 1;
 
     static float PAS_TOUCHE = 3.65f;
 
@@ -37,7 +41,9 @@ public class Vise_Tir : MonoBehaviour
 
     private void Awake()
     {
-        
+        Color color = sphere.color;
+        color.a = 0;
+        sphere.color = color;
 
         rigidbodyA = GetComponent<Rigidbody>();
 
@@ -77,7 +83,9 @@ public class Vise_Tir : MonoBehaviour
             cameraController.canRotate = true;
             count++;
             nb_coups.SetText(count.ToString());
-            barre.fillAmount = 0;
+            Color color = sphere.color;
+            color.a = 0;
+            sphere.color = color;
         }
     }
 
@@ -130,15 +138,74 @@ public class Vise_Tir : MonoBehaviour
         rigidbodyA.velocity = Vector3.zero;
         rigidbodyA.angularVelocity = Vector3.zero;
         isIdle = true;
-        pointVert.color = Color.green;
+        sphereIndic.SetActive(true);
+    }
+
+
+
+    IEnumerator ChangeColor1()
+    {
+        Color color = sphere.color;
+        color.a = Mathf.Lerp(sphere.color.a, 0f, Time.deltaTime * lerpDuration);
+        sphere.color = color;
+        if (color.a <= 0)
+            color.a = 0;
+        yield return new WaitForSeconds(WaitForSeconds1);
+        can_change = false;
+    }
+    IEnumerator ChangeColor2()
+    {
+        Color color = sphere.color;
+        color.a = Mathf.Lerp(sphere.color.a, 1.5f, Time.deltaTime * lerpDuration);
+        sphere.color = color;
+        if (color.a >= 1)
+            color.a = 1;
+        yield return new WaitForSeconds(WaitForSeconds2);
+        can_change = true;
     }
     void Update()
     {
+        if (can_change == false)
+            StartCoroutine(ChangeColor2());
 
-        //Debug.Log(diffDistance);
+        else if(can_change == true)
+            StartCoroutine(ChangeColor1());    
+        
         if (isAiming)
         {
-            barre.fillAmount = diffDistance / PAS_TOUCHE;
+            float power = diffDistance / PAS_TOUCHE;
+
+            if (power <= 0.165)
+            {
+                Debug.Log("1");
+                lineRenderer.startColor = new Color32(42, 209, 13, 255);
+            }
+            else if (power <= 0.33)
+            {
+                Debug.Log("2");
+                lineRenderer.startColor = new Color32(112, 209, 14, 255);
+            }
+            else if (power <= 0.495)
+            {
+                Debug.Log("3");
+                lineRenderer.startColor = new Color32(186, 209, 14, 255);
+            }
+            else if (power <= 0.66)
+            {
+                Debug.Log("4");
+                lineRenderer.startColor = new Color32(209, 196, 14, 255);
+            }
+            else if (power <= 0.765)
+            {
+                Debug.Log("5");
+                lineRenderer.startColor = new Color32(209, 124, 14, 255);
+            }
+
+            else if (power >= 1)
+            {
+                Debug.Log("6");
+                lineRenderer.startColor = new Color32(209, 43, 13, 255);
+            }
         }
 
         if (Input.GetKeyDown("r"))
@@ -173,7 +240,7 @@ public class Vise_Tir : MonoBehaviour
         else
         {
             isIdle = false;
-            pointVert.color = Color.red;
+            sphereIndic.SetActive(false);
         }
         
         ProccesAim();
