@@ -3668,7 +3668,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1154697907}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
@@ -5590,7 +5590,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1154697909}
   - component: {fileID: 1154697908}
-  - component: {fileID: 1154697907}
   m_Layer: 0
   m_Name: _Scripts
   m_TagString: Untagged
@@ -5598,22 +5597,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1154697907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154697906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e97ec78bfa28674f8694b327b6dbdb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ball: {fileID: 0}
-  UI: {fileID: 242580712}
-  PauseMenu: {fileID: 998809447}
-  cameraController: {fileID: 0}
 --- !u!114 &1154697908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7432,7 +7415,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1154697907}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuPause, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
