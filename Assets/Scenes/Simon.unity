@@ -1353,6 +1353,14 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+      propertyPath: WaitForSeconds1
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+      propertyPath: WaitForSeconds2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: cameraController
       value: 
       objectReference: {fileID: 963194229}

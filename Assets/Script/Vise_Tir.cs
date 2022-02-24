@@ -156,7 +156,7 @@ public class Vise_Tir : MonoBehaviour
     IEnumerator ChangeColor2()
     {
         Color color = sphere.color;
-        color.a = Mathf.Lerp(sphere.color.a, 1.5f, Time.deltaTime * lerpDuration);
+        color.a = Mathf.Lerp(sphere.color.a, 1f, Time.deltaTime * lerpDuration);
         sphere.color = color;
         if (color.a >= 1)
             color.a = 1;
