@@ -213,12 +213,6 @@ public class Vise_Tir : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
-        if (Input.GetKeyDown("escape"))
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-          //  Application.Quit();
-        }
-
         if (!isAiming)
         {
             SetCursorPos(Screen.width / 2, Screen.height / 2);
