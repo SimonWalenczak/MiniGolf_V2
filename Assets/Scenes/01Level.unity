@@ -1476,8 +1476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 1939155832}
-  UI: {fileID: 0}
-  PauseMenu: {fileID: 0}
+  UI: {fileID: 2075352445}
+  PauseMenu: {fileID: 291764579}
   cameraController: {fileID: 1102657321}
 --- !u!4 &356859465
 Transform:
