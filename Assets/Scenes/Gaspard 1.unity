@@ -12538,6 +12538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 0}
 --- !u!65 &1078104286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13066,7 +13067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4088188083442583740, guid: 770c3c6c0654ca943bc7c284789d8e44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6692996
+      value: -5.052
       objectReference: {fileID: 0}
     - target: {fileID: 4088188083442583740, guid: 770c3c6c0654ca943bc7c284789d8e44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13074,7 +13075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4088188083442583740, guid: 770c3c6c0654ca943bc7c284789d8e44, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.08556
+      value: 19.539
       objectReference: {fileID: 0}
     - target: {fileID: 4088188083442583740, guid: 770c3c6c0654ca943bc7c284789d8e44, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18137,6 +18138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 0}
 --- !u!65 &1493130993
 BoxCollider:
   m_ObjectHideFlags: 0
