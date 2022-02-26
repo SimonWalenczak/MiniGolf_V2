@@ -561,8 +561,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 809416208}
-  UI: {fileID: 0}
-  PauseMenu: {fileID: 0}
+  UI: {fileID: 1965970609}
+  PauseMenu: {fileID: 1811398338}
   cameraController: {fileID: 717476171}
 --- !u!4 &467364793
 Transform:
@@ -979,6 +979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 0}
 --- !u!65 &576166450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1303,6 +1304,10 @@ PrefabInstance:
       value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+      propertyPath: rigidbodyA
+      value: 
+      objectReference: {fileID: 809416210}
+    - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: sphereIndic
       value: 
       objectReference: {fileID: 881016504}
@@ -1420,6 +1425,22 @@ Transform:
 --- !u!1 &809416208 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1576791406964785788, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+  m_PrefabInstance: {fileID: 809416206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &809416209 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+  m_PrefabInstance: {fileID: 809416206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809416208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352de8d380bb4134785ee9f8da1d4841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &809416210 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1850134592, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
   m_PrefabInstance: {fileID: 809416206}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &881016504
@@ -1904,6 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 809416209}
 --- !u!65 &1356201429
 BoxCollider:
   m_ObjectHideFlags: 0

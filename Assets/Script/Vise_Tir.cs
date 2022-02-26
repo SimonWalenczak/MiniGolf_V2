@@ -18,8 +18,9 @@ public class Vise_Tir : MonoBehaviour
     public bool isIdle;
     public bool isAiming;
    
-    private Rigidbody rigidbodyA;
+    public Rigidbody rigidbodyA;
 
+    public Vector3 previousPos;
 
     public float actualPower;
     public float diffDistance;
@@ -165,6 +166,11 @@ public class Vise_Tir : MonoBehaviour
     }
     void Update()
     {
+        if (rigidbodyA.velocity == Vector3.zero)
+        {
+            previousPos = new Vector3(rigidbodyA.transform.position.x, rigidbodyA.transform.position.y, rigidbodyA.transform.position.z);
+        }
+
         if (can_change == false)
             StartCoroutine(ChangeColor2());
 

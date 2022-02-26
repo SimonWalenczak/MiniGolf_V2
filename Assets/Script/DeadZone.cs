@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class DeadZone : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public Vise_Tir vise_Tir;
+
+    public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Homer Simpson : C'est nul !");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        vise_Tir.rigidbodyA.transform.position = vise_Tir.previousPos;
+        vise_Tir.rigidbodyA.velocity = Vector3.zero;
+        vise_Tir.rigidbodyA.angularVelocity = Vector3.zero;
     }
 }
