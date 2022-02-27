@@ -214,10 +214,7 @@ public class Vise_Tir : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown("r"))
-        {
-            SceneManager.LoadScene(0);
-        }
+
 
         if (!isAiming)
         {

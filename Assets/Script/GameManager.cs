@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
             PauseMenu.SetActive(!PauseMenu.activeSelf);
             ball.SetActive(!ball.activeSelf);
         }
+
+        if (Input.GetKeyDown("r"))
+        {
+            Restart();
+        }
     }
     public void Continue()
     {
@@ -46,6 +51,11 @@ public class GameManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void Next()
