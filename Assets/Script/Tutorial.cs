@@ -7,6 +7,7 @@ public class Tutorial : MonoBehaviour
     public Vise_Tir vise_Tir;
     public GameObject UI_Tuto_1;
     public GameObject UI_Tuto_2;
+    public GameObject UI_Tuto_3;
 
     private void Update()
     {
@@ -17,6 +18,12 @@ public class Tutorial : MonoBehaviour
         }
 
         else if (vise_Tir.count == 2)
+        {
+            UI_Tuto_2.SetActive(false);
+            UI_Tuto_3.SetActive(true);
+        }
+
+        else if (vise_Tir.count == 3)
         {
             UI_Tuto_2.SetActive(false);
         }
