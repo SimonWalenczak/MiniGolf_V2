@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/10Level.unity
     guid: 954d38d375421c34e955b05ebee5c732
+  - enabled: 1
+    path: Assets/Scenes/Remerciements.unity
+    guid: 46a7a5068e4514c45a50ff14bbc4e64c
   m_configObjects: {}
