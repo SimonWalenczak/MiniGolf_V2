@@ -2101,6 +2101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2829200855972838998, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1850134591, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: barre
       value: 
@@ -4504,7 +4508,7 @@ Transform:
   - {fileID: 755772739}
   - {fileID: 2069218870}
   m_Father: {fileID: 1781462071}
-  m_RootOrder: 140
+  m_RootOrder: 120
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528100055
 GameObject:
@@ -15661,6 +15665,7 @@ Transform:
   - {fileID: 506466426}
   - {fileID: 1847830965}
   - {fileID: 1641328945}
+  - {fileID: 521220868}
   - {fileID: 118866071}
   - {fileID: 993572528}
   - {fileID: 749188663}
@@ -15681,7 +15686,6 @@ Transform:
   - {fileID: 857667216}
   - {fileID: 829639610}
   - {fileID: 694315747}
-  - {fileID: 521220868}
   - {fileID: 1818822634}
   - {fileID: 111170708}
   - {fileID: 1977594502}
