@@ -13252,7 +13252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vise_Tir: {fileID: 0}
+  vise_Tir: {fileID: 1149312265}
 --- !u!65 &1078104286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13274,7 +13274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078104284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.5, y: -6.7, z: 2.83}
+  m_LocalPosition: {x: -11.8, y: -6.7, z: 10.3}
   m_LocalScale: {x: 13.55, y: 1, z: 15.09}
   m_Children: []
   m_Father: {fileID: 0}

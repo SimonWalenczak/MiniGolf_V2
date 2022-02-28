@@ -8588,7 +8588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIFin: {fileID: 837635598}
   ball: {fileID: 1308661214}
-  cameraController: {fileID: 0}
+  cameraController: {fileID: 485897126}
   gameManager: {fileID: 1826677126}
   vise_Tir: {fileID: 1308661215}
   intStar1: 3
