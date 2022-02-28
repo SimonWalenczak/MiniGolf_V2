@@ -33475,6 +33475,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478096, guid: a293b09709959144982b3503355316b1, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478096, guid: a293b09709959144982b3503355316b1, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -33528,8 +33532,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5613861, y: 0.49121952, z: 0.6595154}
-  m_Center: {x: -0.015266418, y: -0.3835969, z: 0.59246063}
+  m_Size: {x: 0.21174762, y: 0.041748036, z: 0.22075984}
+  m_Center: {x: 0.0032501027, y: -0.06462486, z: 0.51080877}
 --- !u!82 &1880163393
 AudioSource:
   m_ObjectHideFlags: 0
