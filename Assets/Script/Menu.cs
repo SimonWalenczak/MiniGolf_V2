@@ -21,6 +21,7 @@ public class Menu : MonoBehaviour
     {
         yield return new WaitForSeconds(2);  
     }
+
     public void OnClickPlay()
     {
         SceneManager.LoadScene(1);
@@ -39,6 +40,6 @@ public class Menu : MonoBehaviour
     }
     public void OnClickCredit()
     {
-        Panel.SetActive(!Panel.activeSelf);
+        SceneManager.LoadScene(12);
     }
 }
