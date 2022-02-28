@@ -37,6 +37,8 @@ public class Vise_Tir : MonoBehaviour
 
     static float PAS_TOUCHE = 3.65f;
 
+    AudioSource audioData;
+
     [DllImport("user32.dll")]
     public static extern bool SetCursorPos(int X, int Y);
 
@@ -80,6 +82,8 @@ public class Vise_Tir : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
+            audioData = GetComponent<AudioSource>();
+            audioData.Play(0);
             Shoot(worldPoint.Value);
             cameraController.canRotate = true;
             count++;

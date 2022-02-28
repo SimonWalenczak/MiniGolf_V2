@@ -19,8 +19,12 @@ public class Victory : MonoBehaviour
     public GameObject Star2;
     public GameObject Star3;
 
+    AudioSource audioData;
+
     private void OnTriggerEnter(Collider other)
     {
+        audioData = GetComponent<AudioSource>();
+        audioData.Play(0);
         Debug.Log("Bravo !!!");
         UIFin.SetActive(true);
         Cursor.visible = true;

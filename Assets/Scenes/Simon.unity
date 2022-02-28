@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 0}
 --- !u!65 &273859435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -553,9 +554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 482673097}
-  UI: {fileID: 460516204}
+  UIFin: {fileID: 0}
   PauseMenu: {fileID: 341273990}
   cameraController: {fileID: 963194229}
+  fade: {fileID: 0}
+  can_paused: 1
 --- !u!4 &695527666
 Transform:
   m_ObjectHideFlags: 0
@@ -1185,9 +1188,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603795b0f3c92904ebbf8793ff201974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointVert: {fileID: 0}
-  fade: {fileID: 369140942}
-  text: {fileID: 1035108233}
+  UIFin: {fileID: 0}
+  ball: {fileID: 0}
+  cameraController: {fileID: 0}
+  gameManager: {fileID: 0}
+  vise_Tir: {fileID: 0}
+  intStar1: 3
+  intStar2: 2
+  intStar3: 1
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
 --- !u!65 &1040687929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1283,6 +1294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2829200855972838998, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 390121256, guid: 13edfafb432010844b55ebfdca987b58, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0.5122107
@@ -2464,3 +2479,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5403a740c6d3542ad326c8b0269b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vise_Tir: {fileID: 0}
