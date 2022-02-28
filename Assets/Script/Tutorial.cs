@@ -25,7 +25,7 @@ public class Tutorial : MonoBehaviour
 
         else if (vise_Tir.count == 3)
         {
-            UI_Tuto_2.SetActive(false);
+            UI_Tuto_3.SetActive(false);
         }
     }
 }
