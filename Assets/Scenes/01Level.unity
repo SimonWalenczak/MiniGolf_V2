@@ -5927,9 +5927,9 @@ MonoBehaviour:
   cameraController: {fileID: 1102657321}
   gameManager: {fileID: 356859464}
   vise_Tir: {fileID: 1939155833}
-  intStar1: 8
-  intStar2: 5
-  intStar3: 4
+  intStar1: 9
+  intStar2: 6
+  intStar3: 3
   Star1: {fileID: 241421655}
   Star2: {fileID: 904752774}
   Star3: {fileID: 1145565087}

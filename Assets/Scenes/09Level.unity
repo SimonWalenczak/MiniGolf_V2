@@ -22974,7 +22974,7 @@ MonoBehaviour:
   gameManager: {fileID: 322903467}
   vise_Tir: {fileID: 283125559}
   intStar1: 25
-  intStar2: 15
+  intStar2: 16
   intStar3: 13
   Star1: {fileID: 294229963}
   Star2: {fileID: 1792429555}
